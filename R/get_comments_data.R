@@ -1,6 +1,4 @@
 
-library(httr)
-library(dplyr)
 
 
 get_comments_data<- function( subreddit, ncomments=10,max_error_conseq=3, grouped=FALSE,subset=TRUE,subsetn =13000) {
