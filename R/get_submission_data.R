@@ -1,9 +1,9 @@
 
 library(httr)
 library(dplyr)
-a
+
 get_submission_data <- function( subreddit, nsubmissions=10,max_error_conseq=3) {
-s
+
 
   timestamp <- round(as.numeric(as.POSIXct(Sys.time(), tz = "UTC")),digits =0)
   data_submission_main <- NULL
