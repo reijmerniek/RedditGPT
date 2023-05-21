@@ -1,7 +1,19 @@
 
-library(httr)
-library(dplyr)
 
+
+#' Title
+#'
+#' @param subreddit
+#' @param nsubmissions
+#' @param ncomments
+#' @param max_error_conseq
+#' @param subset
+#' @param subsetn
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_full_dataset<- function( subreddit="",nsubmissions=10, ncomments=10,max_error_conseq=3,subset=TRUE,subsetn =13000) {
 
 timestamp <- round(as.numeric(as.POSIXct(Sys.time(), tz = "UTC")),digits =0)

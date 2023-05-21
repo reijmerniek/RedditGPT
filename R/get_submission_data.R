@@ -1,7 +1,15 @@
 
-library(httr)
-library(dplyr)
 
+#' Title
+#'
+#' @param subreddit
+#' @param nsubmissions
+#' @param max_error_conseq
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_submission_data <- function( subreddit, nsubmissions=10,max_error_conseq=3) {
 
 
