@@ -1,6 +1,18 @@
 
-
-
+#' Title
+#'
+#' @param subreddit
+#' @param ncomments
+#' @param max_error_conseq
+#' @param grouped
+#' @param subset
+#' @param subsetn
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#'
 get_comments_data<- function( subreddit, ncomments=10,max_error_conseq=3, grouped=FALSE,subset=TRUE,subsetn =13000) {
 
 
