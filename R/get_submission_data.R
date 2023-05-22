@@ -11,6 +11,8 @@
 #'
 #' @examples
 get_submission_data <- function( subreddit, nsubmissions=10,max_error_conseq=3) {
+  library(httr)
+  library(dplyr)
 
 
   timestamp <- round(as.numeric(as.POSIXct(Sys.time(), tz = "UTC")),digits =0)

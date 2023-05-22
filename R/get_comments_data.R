@@ -14,7 +14,8 @@
 #' @examples
 #'
 get_comments_data<- function( subreddit, ncomments=10,max_error_conseq=3, grouped=FALSE,subset=TRUE,subsetn =13000) {
-
+library(httr)
+library(dplyr)
 
   timestamp <- round(as.numeric(as.POSIXct(Sys.time(), tz = "UTC")),digits =0)
   data_comment_main <- NULL
