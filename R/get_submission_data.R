@@ -25,8 +25,8 @@ get_submission_data <- function( subreddit, nsubmissions=10,max_error_conseq=3) 
   while (total_length < threshold_submissions) {
 
     tryCatch({
-      response <- GET(paste0("https://api.pushshift.io/reddit/search/submission/?subreddit=", subreddit, "&size=1000&before=", timestamp), timeout(10))
-      result <- content(response, as = "text", encoding = "UTF-8")
+      response <- httr::GET(paste0("https://api.pushshift.io/reddit/search/submission/?subreddit=", subreddit, "&size=1000&before=", timestamp), timeout(10))
+      result <- httr::content(response, as = "text", encoding = "UTF-8")
       data_submission <- result %>% jsonlite::fromJSON() %>%
         .$data %>% jsonlite::flatten() %>%
         select(selftext, author_fullname, title, created_utc, id,
