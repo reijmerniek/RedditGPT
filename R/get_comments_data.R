@@ -27,7 +27,7 @@ get_comments_data<- function( subreddit, ncomments=10,max_error_conseq=3, groupe
   while (total_length < threshold_comments) {
 
     tryCatch({
-      response <- httr::GET(paste0("https://api.pushshift.io/reddit/search/comment/?subreddit=", subreddit, "&size=1000&before=", timestamp), timeout(10))
+      response <- httr::GET(paste0("https://api.pushshift.io/reddit/search/comment/?subreddit=", subreddit, "&size=1000&before=", timestamp), httr::timeout(10))
       result <- httr::content(response, as = "text", encoding = "UTF-8")
 
       data_comment <- result %>% jsonlite::fromJSON() %>%
